@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Шукрона</title>
+<style>
+  html,body{margin:0;height:100%;overflow:hidden;background:radial-gradient(circle at 50% 40%, #1a1a1a 0%, #050505 70%, #000 100%);
+    display:flex;align-items:center;justify-content:center;font-family:'Segoe UI',sans-serif;}
+  .stage{position:relative;width:100vw;height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;}
+  .web{position:absolute;top:50%;left:50%;width:70vmin;height:70vmin;transform:translate(-50%,-50%);
+       animation:spin 12s linear infinite;opacity:0.35;}
+  @keyframes spin{from{transform:translate(-50%,-50%) rotate(0deg);}to{transform:translate(-50%,-50%) rotate(360deg);}}
+  .hand{width:40vmin;height:40vmin;animation:swing 1.6s ease-in-out infinite;
+        filter:drop-shadow(0 0 25px rgba(180,60,255,0.6));position:relative;z-index:2;}
+  @keyframes swing{
+    0%,100%{transform:rotate(-8deg);}
+    50%{transform:rotate(8deg);}
+  }
+  h1{color:#c060ff;font-size:8.5vmin;margin-top:4vmin;letter-spacing:2px;
+     text-shadow:0 0 20px rgba(180,60,255,0.9);text-transform:uppercase;position:relative;z-index:2;}
+  .spider{position:absolute;font-size:6vmin;animation:crawl 3s linear infinite;z-index:2;}
+  @keyframes crawl{
+    0%{top:-10vmin;left:20vmin;}
+    25%{top:20vmin;left:60vmin;}
+    50%{top:60vmin;left:70vmin;}
+    75%{top:70vmin;left:20vmin;}
+    100%{top:-10vmin;left:20vmin;}
+  }
+</style>
+</head>
+<body>
+<div class="stage">
+  <svg class="web" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" stroke="#c060ff" fill="none" stroke-width="1">
+    <circle cx="100" cy="100" r="20"/><circle cx="100" cy="100" r="45"/><circle cx="100" cy="100" r="70"/><circle cx="100" cy="100" r="95"/>
+    <line x1="100" y1="100" x2="100" y2="0"/><line x1="100" y1="100" x2="100" y2="200"/>
+    <line x1="100" y1="100" x2="0" y2="100"/><line x1="100" y1="100" x2="200" y2="100"/>
+    <line x1="100" y1="100" x2="30" y2="30"/><line x1="100" y1="100" x2="170" y2="30"/>
+    <line x1="100" y1="100" x2="30" y2="170"/><line x1="100" y1="100" x2="170" y2="170"/>
+  </svg>
+  <div class="spider">🕷</div>
+  <svg class="hand" viewBox="0 0 200 260" xmlns="http://www.w3.org/2000/svg">
+    <ellipse cx="100" cy="230" rx="55" ry="20" fill="#000" opacity="0.35"/>
+    <path d="M60 260 
+             L60 150
+             Q60 130 78 130
+             L82 130
+             L82 40
+             Q82 20 100 20
+             Q118 20 118 40
+             L118 130
+             Q140 130 140 150
+             L140 260 Z"
+          fill="#3a2a4a" stroke="#c060ff" stroke-width="3"/>
+    <path d="M60 190 L140 190 L140 260 L60 260 Z" fill="#3a2a4a" stroke="#c060ff" stroke-width="3"/>
+    <path d="M60 190 Q40 190 40 210 Q40 230 60 230" fill="#3a2a4a" stroke="#c060ff" stroke-width="3"/>
+    <path d="M140 190 Q160 190 160 210 Q160 230 140 230" fill="#3a2a4a" stroke="#c060ff" stroke-width="3"/>
+    <path d="M60 220 Q45 225 48 245" fill="none" stroke="#c060ff" stroke-width="3"/>
+    <path d="M140 220 Q155 225 152 245" fill="none" stroke="#c060ff" stroke-width="3"/>
+  </svg>
+  <h1>Шукрона 🖕</h1>
+</div>
+</body>
+</html>

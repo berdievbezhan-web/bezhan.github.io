@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Бежан</title>
+<style>
+  html,body{margin:0;height:100%;overflow:hidden;background:radial-gradient(circle at 50% 40%, #221a4a 0%, #0d0a20 70%, #000 100%);
+    display:flex;align-items:center;justify-content:center;font-family:'Segoe UI',sans-serif;}
+  .stage{width:100vw;height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;}
+  svg{width:42vmin;height:42vmin;animation:pulse 1.1s ease-in-out infinite;
+      filter:drop-shadow(0 0 30px rgba(140,90,255,0.75));}
+  @keyframes pulse{
+    0%,100%{transform:scale(1);}
+    50%{transform:scale(1.18);}
+  }
+  h1{color:#b388ff;font-size:9vmin;margin-top:4vmin;letter-spacing:2px;
+     text-shadow:0 0 20px rgba(140,90,255,0.9);text-transform:uppercase;
+     animation:glow 1.1s ease-in-out infinite;}
+  @keyframes glow{0%,100%{opacity:0.8;}50%{opacity:1;}}
+</style>
+</head>
+<body>
+<div class="stage">
+  <svg viewBox="0 0 200 260" xmlns="http://www.w3.org/2000/svg">
+    <ellipse cx="100" cy="230" rx="55" ry="20" fill="#000" opacity="0.35"/>
+    <path d="M60 260 
+             L60 150
+             Q60 130 78 130
+             L82 130
+             L82 40
+             Q82 20 100 20
+             Q118 20 118 40
+             L118 130
+             Q140 130 140 150
+             L140 260 Z"
+          fill="#d9c8ff" stroke="#5a3a99" stroke-width="3"/>
+    <path d="M60 190 L140 190 L140 260 L60 260 Z" fill="#d9c8ff" stroke="#5a3a99" stroke-width="3"/>
+    <path d="M60 190 Q40 190 40 210 Q40 230 60 230" fill="#d9c8ff" stroke="#5a3a99" stroke-width="3"/>
+    <path d="M140 190 Q160 190 160 210 Q160 230 140 230" fill="#d9c8ff" stroke="#5a3a99" stroke-width="3"/>
+    <path d="M60 220 Q45 225 48 245" fill="none" stroke="#5a3a99" stroke-width="3"/>
+    <path d="M140 220 Q155 225 152 245" fill="none" stroke="#5a3a99" stroke-width="3"/>
+  </svg>
+  <h1>Бежан 🖕</h1>
+</div>
+</body>
+</html>

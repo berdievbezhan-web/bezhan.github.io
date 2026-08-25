@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Мансур</title>
+<style>
+  html,body{margin:0;height:100%;overflow:hidden;background:radial-gradient(circle at 50% 40%, #3a0000 0%, #150000 70%, #000 100%);
+    display:flex;align-items:center;justify-content:center;font-family:'Segoe UI',sans-serif;}
+  .stage{position:relative;width:100vw;height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;}
+  svg{width:42vmin;height:42vmin;animation:shake 0.42s infinite;filter:drop-shadow(0 0 25px rgba(255,40,20,0.65));}
+  @keyframes shake{
+    0%{transform:rotate(-4deg) translateY(0);}
+    25%{transform:rotate(4deg) translateY(-3px);}
+    50%{transform:rotate(-3deg) translateY(2px);}
+    75%{transform:rotate(3deg) translateY(-2px);}
+    100%{transform:rotate(-4deg) translateY(0);}
+  }
+  h1{color:#ff2b1f;font-size:9vmin;margin-top:4vmin;letter-spacing:2px;
+     text-shadow:0 0 18px rgba(255,40,20,0.9),0 0 40px rgba(255,0,0,0.5);
+     animation:pulseText 0.8s ease-in-out infinite;text-transform:uppercase;}
+  @keyframes pulseText{0%,100%{transform:scale(1);}50%{transform:scale(1.06);}}
+  .flash{position:absolute;inset:0;background:rgba(255,0,0,0.08);animation:flash 0.3s infinite alternate;pointer-events:none;}
+  @keyframes flash{from{opacity:0;}to{opacity:1;}}
+</style>
+</head>
+<body>
+<div class="flash"></div>
+<div class="stage">
+  <svg viewBox="0 0 200 260" xmlns="http://www.w3.org/2000/svg">
+    <ellipse cx="100" cy="230" rx="55" ry="20" fill="#000" opacity="0.35"/>
+    <path d="M60 260 
+             L60 150
+             Q60 130 78 130
+             L82 130
+             L82 40
+             Q82 20 100 20
+             Q118 20 118 40
+             L118 130
+             Q140 130 140 150
+             L140 260 Z"
+          fill="#e8b389" stroke="#7a4a2a" stroke-width="3"/>
+    <path d="M60 190 L140 190 L140 260 L60 260 Z" fill="#e8b389" stroke="#7a4a2a" stroke-width="3"/>
+    <path d="M60 190 Q40 190 40 210 Q40 230 60 230" fill="#e8b389" stroke="#7a4a2a" stroke-width="3"/>
+    <path d="M140 190 Q160 190 160 210 Q160 230 140 230" fill="#e8b389" stroke="#7a4a2a" stroke-width="3"/>
+    <path d="M60 220 Q45 225 48 245" fill="none" stroke="#7a4a2a" stroke-width="3"/>
+    <path d="M140 220 Q155 225 152 245" fill="none" stroke="#7a4a2a" stroke-width="3"/>
+  </svg>
+  <h1>Мансур 🖕</h1>
+</div>
+</body>
+</html>
